@@ -6,4 +6,19 @@
         select *
         from book
     </select>
+
+    <select id="getBookById" resultType="BookDTO" parameterType="Integer">
+        select *
+        from book
+        where bno = #{id}
+    </select>
+
+    <update id="borrowBook" parameterType="BookDTO">
+        update book
+        set borrowerId   = #{borrowerId},
+            startDate    = NOW(),
+            endDate      = DATE_ADD(NOW(), INTERVAL 1 WEEK),
+            availability = 0
+        where bno = #{bno}
+    </update>
 </mapper>

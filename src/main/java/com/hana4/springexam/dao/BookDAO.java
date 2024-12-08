@@ -16,5 +16,6 @@ public interface BookDAO {
 
 	BookDTO getResultById(int id);
 
-	void borrowBook(int id, String borrowerId);
+	void borrowBook(BookDTO book);
+
 }

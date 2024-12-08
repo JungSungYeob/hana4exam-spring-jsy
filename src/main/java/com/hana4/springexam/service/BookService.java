@@ -15,8 +15,8 @@ public class BookService {
 		this.bookDAO = bookDAO;
 	}
 
-	public void borrowBook(int id, String borrowerId) {
-		bookDAO.borrowBook(id, borrowerId);
+	public void borrowBook(BookDTO book) {
+		bookDAO.borrowBook(book);
 	}
 
 	public List<BookDTO> getBookList() {
