@@ -17,5 +17,4 @@ public interface BookDAO {
 	BookDTO getResultById(int id);
 
 	void borrowBook(BookDTO book);
-
 }
