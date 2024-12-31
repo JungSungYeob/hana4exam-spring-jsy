@@ -8,7 +8,7 @@
             <spring:message code="ln.language"/>
         </label>
         <select id="locale" name="locale" class="border" required>
-
+            <option>언어</option>
             <c:forEach var="language" items="${languages}">
                 <option value="${language.locale}" ${language.locale == currLang ? 'selected' : ''}>
                         ${language.lang}
